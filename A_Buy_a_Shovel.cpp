@@ -1,0 +1,66 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+typedef long long int ll;
+typedef pair<int, int> pii;
+typedef pair<ll, ll> pll;
+typedef pair<string, string> pss;
+typedef vector<int> vi;
+typedef vector<vi> vvi;
+typedef vector<pii> vii;
+typedef vector<ll> vl;
+typedef vector<vl> vvl;
+typedef map<int, int> mi;
+typedef map<ll,ll> mll;
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#define  fast  ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0)
+#define  fi(a,b) for(int i=a;i<b;i++)
+#define  rfi(a,b) for(int i=a;i>b;i--)
+#define  fj(a,b) for(int j=a;i<b;j++)
+#define  rfj(a,b) for(int j=a;j>b;j--)
+#define haa cout<<"YES"<<endl;
+#define naa cout<<"NO"<<endl;
+#define fs first
+#define se second
+#define mp make_pair
+#define pb push_back
+#define allv(v) v.begin(), v.end()
+#define alla(arr, sz) arr, arr + sz
+#define SIZE(v) (int)v.size()
+#define SORT(v) sort(allv(v))
+#define REVERSE(v) reverse(allv(v))
+#define MA INT64_MIN
+#define MI INT64_MAX
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+void solve_amar(){ 
+//    ll a,b,c,i,j,k,n,r,m,x,y,cnt=0,sum=0,arr[n];
+ll k,r,cnt=0,i=1;
+//    string s;
+    cin>>k>>r;
+    while( i<10){
+        // cout<<k%10<<" ";
+        if((k*i)%10 == r || (k*i)%10 ==0){
+            cout<<i;
+            return;
+        }
+        cnt++;
+        i++;
+
+    }
+  return;
+ }
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+int main()
+{
+ fast;
+ int amar=1; 
+//  cin>>amar;
+ while(amar--){
+   solve_amar(); 
+   cout<<endl;
+ }
+  return 0;
+}

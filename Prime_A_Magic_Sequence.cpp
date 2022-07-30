@@ -35,15 +35,7 @@ typedef map<ll,ll> mll;
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 void solve_amar(){ 
-  ll a,b,c,k,l;
-  cin>>a>>b>>c;
-  k = (a+b)/c;
-  l = (a/c)+(b/c);
-  if(k==l)cout<<k<<" "<<0;
-  else{
-    cout<<k<<" "<<min(c- a%c,c- b%c);
-  }
-
+ 
  
   return;
  }
@@ -53,7 +45,7 @@ int main()
 {
  fast;
  int amar=1; 
-//  cin>>amar;
+ cin>>amar;
  while(amar--){
    solve_amar(); 
    cout<<endl;

@@ -9,25 +9,31 @@ typedef long long int ll;
  
  int zero(int a){
     string s = to_string(a);
-    ll count=0;
+    ll c=0;
     fi(0,s.length()){
         if(s[i]=='0'){
-            count++;
+            c++;
+            s.erase(i,i);
         }
     }
-    return count;
+    stringstream g(s);
+    ll x=0;
+    g>>x;
+    return x;
  }
 
 void solve_amar(){ 
   ll a,b;
   cin>>a>>b;
   ll c = a+b;
-  if(zero(a)==zero(b) && zero(a)>=zero(c)){
+  // cout<<zero(a)
+  if(zero(a)+ zero(b) == zero(c)){
     cout<<"YES";
   }
   else{
     cout<<"NO";
   }
+  //  cout<<zero(a);
   return;
  }
  

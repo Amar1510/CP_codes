@@ -15,7 +15,23 @@ void solve_amar(){
     cin>>a[i];
     sum+=a[i];
   }
-  fi(0,5)
+  if((n+1)%2==0){
+    if(sum%2==0){
+      cout<<3;
+    }
+    else{
+      cout<<1;
+    }
+  }
+  else{
+    if(sum %2==0){
+      cout<<1;
+    }
+    else{
+      cout<<2;
+    }
+  }
+
   return;
  }
  

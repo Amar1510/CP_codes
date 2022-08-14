@@ -15,7 +15,7 @@ typedef map<int, int> mi;
 typedef map<ll,ll> mll;
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #define  fast  ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0)
-#define  fi(a,b) for(int i=a;i<b;i++)
+#define  fi(a,b) for(ll i=a;i<b;i++)
 #define  rfi(a,b) for(int i=a;i>b;i--)
 #define  fj(a,b) for(int j=a;i<b;j++)
 #define  rfj(a,b) for(int j=a;j>b;j--)
@@ -37,18 +37,41 @@ typedef map<ll,ll> mll;
 void solve_amar(){ 
     ll n;
     cin>>n;
-    string s;
-    ll a[n][n];
+    ll a[n],b[3000];
+    
     fi(0,n){
-        cin>>s;
-        fj(0,n){
-            a[i][j]=s[j];
-            if(i==j || abs(i-j)==(n-1)){
-                
-            }
+        cin>>a[i];
+    }
+    if(n==1 && a[0]==1){
+        cout<<2;
+        return;
+    }
+    fi(0,3000){
+        b[i]= i+1;
+    }
+    sort(a,a+n);
+    // if(a[0]!=1){
+    //     cout<<1;
+    // }
+    // else{
+    //      fi(0,n-1){
+    //     if(a[i+1] != a[i]+1){
+    //         cout<<a[i]+1;
+    //         break;
+    //     }
+    // }
+
+    // 
+    ll r=0;
+    fi(0,n){
+        if(a[i]!=b[i]){
+            cout<<b[i];
+            // break;
+            return;
         }
     }
-
+    cout<<n+1;
+   
  
  
   return;

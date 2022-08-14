@@ -37,18 +37,28 @@ typedef map<ll,ll> mll;
 void solve_amar(){ 
     ll n;
     cin>>n;
-    string s;
-    ll a[n][n];
+    vl a(4*n);
+    fi(0,4*n){
+        cin>>a[i];
+        // m[a[i]]++;
+    }
+    // for(auto x : m){
+    //     s.insert(x.second);
+    // }
+    // if(s.size()==1)haa
+    // else naa
+    SORT(a);
+    ll ar = a[0]*a[4*n -1];
+    // cout<<ar;
+    bool f=true;
     fi(0,n){
-        cin>>s;
-        fj(0,n){
-            a[i][j]=s[j];
-            if(i==j || abs(i-j)==(n-1)){
-                
-            }
+        if(a[2*i +1]!=a[2*i]  || a[4*n -(2*i) -1]!=a[4*n - 2*i -2] || a[2*i]*a[4*n -2*i -1] != ar){
+            f = false;
+            // return;
         }
     }
-
+    if(f)haa
+    else naa
  
  
   return;
@@ -59,10 +69,10 @@ int main()
 {
  fast;
  int amar=1; 
-//  cin>>amar;
+ cin>>amar;
  while(amar--){
    solve_amar(); 
-   cout<<endl;
+//    cout<<endl;
  }
   return 0;
 }

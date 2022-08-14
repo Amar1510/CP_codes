@@ -35,20 +35,13 @@ typedef map<ll,ll> mll;
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 void solve_amar(){ 
-    ll n;
-    cin>>n;
-    string s;
-    ll a[n][n];
-    fi(0,n){
-        cin>>s;
-        fj(0,n){
-            a[i][j]=s[j];
-            if(i==j || abs(i-j)==(n-1)){
-                
-            }
-        }
+    ll n,m,sum=0;
+    cin>>n>>m;
+    ll a = n/m;
+    fi(1,a+1){
+        sum += ((m*i)%10);    
     }
-
+    cout<<sum;
  
  
   return;
@@ -59,7 +52,7 @@ int main()
 {
  fast;
  int amar=1; 
-//  cin>>amar;
+ cin>>amar;
  while(amar--){
    solve_amar(); 
    cout<<endl;
